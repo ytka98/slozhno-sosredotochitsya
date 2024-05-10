@@ -1,5 +1,19 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-.page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+.wrapper {
+  display: grid;
 }
+
+.page {
+  /* background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+  font-size: 18px;
+  font-family: var(--page-font-family, "IBM Plex mono", monospace);
+  color: var(--text-color, rgba(241, 178, 206, 1));
+  line-height: 23.4px;
+  background-color: var(--background-color, rgba(0, 0, 40, 1));
+  background-image: var(--background-image, url("../images/cover-image.png"));
+}
+
+
