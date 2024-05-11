@@ -1,6 +1,6 @@
 :root {
-  --font-family-mono: "IBM Plex mono", monospace;
-  --background-image: url("../images/cover-image.png");
+  --font-family-mono: 'IBM Plex mono', monospace;
+  --background-image: url('../images/cover-image.png');
   --background-color: rgba(0, 0, 40, 1);
 
   --light-pink: rgba(255, 241, 247, 1);
@@ -10,17 +10,20 @@
 
   --vivid-purple: rgba(219, 0, 255, 1);
   --bright-pink: rgba(255, 0, 112, 1);
-  --bright-pink-transparent: rgba(255, 0, 112, 0.25); 
+  --bright-pink-transparent: rgba(255, 0, 112, 0.25);
 
   --deep-blue: rgba(0, 0, 40, 1);
   --dark-gray: rgba(53, 52, 48, 1);
-  --dark-gray-transparent: rgba(53, 52, 48, 0.25);  
+  --dark-gray-transparent: rgba(53, 52, 48, 0.25);
 
-  --text-color: rgba(241, 178, 206, 1);
-  --brand-color: rgba(219, 0, 255, 1);
-  --secondary-color: rgba(255, 0, 112, 1);
-  --secondary-color-transparent: rgba(255, 0, 112, 0.25);
-  --accent-color: rgba(255, 0, 112, 1);
-  --highlight-color: rgba(0, 0, 40, 1);
+  --text-color: var(--soft-pink, rgba(241, 178, 206, 1));
+  --brand-color: var(--vivid-purple, rgba(219, 0, 255, 1));
+  --secondary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+  --secondary-color-transparent: var(
+    --bright-pink-transparent,
+    rgba(255, 0, 112, 0.25)
+  );
+  --accent-color: var(--bright-pink, rgba(255, 0, 112, 1));
+  --highlight-color: var(--deep-blue, rgba(0, 0, 40, 1));
   --recommendation-decoration-visibility: visible;
 }

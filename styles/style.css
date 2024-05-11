@@ -1,19 +1,82 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
+* *,
+*::before,
+*::after {
+  outline: 1px solid red;
+}
 .wrapper {
   display: grid;
+  padding: clamp(
+    10px,
+    0.0286rem + 2.5445vw,
+    20px
+  ); /* устанавливает минимальное значение (10px), и максимальное значение (20px) для отступов, а также значение, которое зависит от ширины окна (0.0286rem + 2.5445vw).*/
+  min-block-size: 100vh;
 }
 
 .page {
-  /* background-size: cover;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; */
+  background-attachment: fixed;
   font-size: 18px;
-  font-family: var(--page-font-family, "IBM Plex mono", monospace);
+  font-family: var(--page-font-family, 'IBM Plex mono', monospace);
   color: var(--text-color, rgba(241, 178, 206, 1));
   line-height: 23.4px;
   background-color: var(--background-color, rgba(0, 0, 40, 1));
-  background-image: var(--background-image, url("../images/cover-image.png"));
+  background-image: var(--background-image, url('../images/cover-image.png'));
 }
 
+.rec-decor::before {
+  content: 'REC';
+  color: var(--accent-color, #ff0070);
+  line-height: 24px;
+}
 
+.rec-decor {
+  display: inline-flex;
+  align-items: center;
+  /* position: absolute; */
+  gap: 10px;
+  visibility: var(--recommendation-decoration-visibility, visible);
+  inset-inline-end: 20px;
+  inset-block-start: 10px;
+  /* z-index: -1; */
+}
+
+.rec-decor::after {
+  content: '';
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--accent-color, rgba(255, 0, 112, 1));
+  background: var(--accent-color, rgba(255, 0, 112, 1));
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.highlighted-area::before {
+  border-right: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  border-top: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  right: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  /* Устанавливает отступ сверху, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
+  top: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+.highlighted-area::after {
+  border-left: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  border-bottom: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  left: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  /* Устанавливает отступ снизу, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
+  bottom: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+}
+
+.highlighted-area {
+  /* position: relative; */
+}
+
+.highlighted-area::before,
+.highlighted-area::after {
+  content: '';
+  /* position: absolute; */
+  inline-size: 25px;
+  block-size: 25px; 
+  /* z-index: -1; */
+}
