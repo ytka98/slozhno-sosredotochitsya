@@ -23,3 +23,5 @@
 ![1024 x 768](images/1.png)
 ![768 x 1024](images/2.png)
 ![375 x 668](images/3.png)
+
+https://github.com/ytka98/slozhno-sosredotochitsya
