@@ -1,5 +1,4 @@
 /* Примение красную обводку ко всем элементам для отладки */
-
 /* * *,
 *::before,
 *::after {
@@ -194,7 +193,8 @@
   line-height: inherit;
 }
 
-.title-decor, .title-decor-normal {
+.title-decor,
+.title-decor-normal {
   background: var(--accent-primary-color, rgba(255, 0, 112, 1));
   color: var(--highlight-primary-color, rgba(0, 0, 40, 1));
 }
