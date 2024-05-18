@@ -1,8 +1,19 @@
-* *,
+/* Примение красную обводку ко всем элементам для отладки */
+
+/* * *,
 *::before,
 *::after {
   outline: 1px solid red;
+} */
+
+/* СЕКЦИЯ MAIN */
+.main {
+  display: grid;
+  gap: 50px;
+  padding: 40px 10px;
 }
+
+/* СЕКЦИЯ HEADER */
 .wrapper {
   display: grid;
   padding: clamp(
@@ -18,65 +29,327 @@
   background-position: center;
   background-attachment: fixed;
   font-size: 18px;
-  font-family: var(--page-font-family, 'IBM Plex mono', monospace);
-  color: var(--text-color, rgba(241, 178, 206, 1));
+  font-family: var(--font-family-mono, 'IBM Plex mono', monospace);
+  color: var(--text-primary-color, rgba(241, 178, 206, 1));
   line-height: 23.4px;
   background-color: var(--background-color, rgba(0, 0, 40, 1));
   background-image: var(--background-image, url('../images/cover-image.png'));
 }
 
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  color: var(--text-secondary-color, rgba(255, 0, 112, 1));
+  text-transform: lowercase;
+  background: transparent;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  /* Устанавливаем цвет границы при наведении на элемент, используя переменную, или значение по умолчанию */
+  border-color: var(
+    --text-secondary-color-transparent,
+    rgba(255, 0, 112, 0.25)
+  );
+}
+
+.header__theme-menu-button_active {
+  /* Устанавливаем цвет границы равным текущему цвету текста */
+  border-color: currentColor;
+  /* Запрещаем изменение курсора */
+  cursor: default;
+  /* Отключаем события указателя мыши для этого элемента */
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus {
+  /* Убираем фокусную рамку */
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  /* Устанавливаем цвет границы при фокусе, если элемент активен */
+  border-block-end-color: currentColor;
+}
+
+.header {
+  align-items: start;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header__theme-menu {
+  margin-block: 65px;
+  justify-self: end;
+}
+
+.header__theme-menu-button_active {
+  border-color: currentColor;
+  cursor: default;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(
+    --text-secondary-color-transparent,
+    rgba(255, 0, 112, 0.25)
+  );
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+/* СЕКЦИЯ C СТИЛИЗАЦИЕЙ REC */
 .rec-decor::before {
   content: 'REC';
-  color: var(--accent-color, #ff0070);
+  color: var(--accent-primary-color, rgba(255, 0, 112, 1));
   line-height: 24px;
 }
 
 .rec-decor {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  /* position: absolute; */
+  position: absolute;
   gap: 10px;
   visibility: var(--recommendation-decoration-visibility, visible);
-  inset-inline-end: 20px;
-  inset-block-start: 10px;
-  /* z-index: -1; */
+  right: 20px;
+  top: 13px;
+  z-index: -1;
 }
 
 .rec-decor::after {
   content: '';
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-color, rgba(255, 0, 112, 1));
-  background: var(--accent-color, rgba(255, 0, 112, 1));
+  box-shadow: 0 0 2px 2px var(--accent-primary-color, rgba(255, 0, 112, 1));
+  background: var(--accent-primary-color, rgba(255, 0, 112, 1));
   inline-size: 9px;
   block-size: 9px;
 }
 
 .highlighted-area::before {
-  border-right: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
-  border-top: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  border-right: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
+  border-top: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
   right: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   /* Устанавливает отступ сверху, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
   top: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .highlighted-area::after {
-  border-left: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
-  border-bottom: 1px solid var(--secondary-color, rgba(255, 0, 112, 1));
+  border-left: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
+  border-bottom: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
   left: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   /* Устанавливает отступ снизу, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
   bottom: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .highlighted-area {
-  /* position: relative; */
+  position: relative;
 }
 
 .highlighted-area::before,
 .highlighted-area::after {
   content: '';
-  /* position: absolute; */
+  position: absolute;
   inline-size: 25px;
-  block-size: 25px; 
-  /* z-index: -1; */
+  block-size: 25px;
+  z-index: -1;
+}
+
+.site__heading {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--brand-primary-color, rgba(219, 0, 255, 1));
+  font-weight: 700;
+  line-height: 82.5%;
+}
+
+.header__shadow-detail {
+  text-shadow: 4px 4px 0 var(--accent-color, rgba(255, 0, 112, 1));
+}
+
+.footer__shadow-detail {
+  text-shadow: 2px 2px 0 var(--accent-color, rgba(255, 0, 112, 1));
+}
+
+.header__page-description {
+  margin-top: 57px;
+  margin-bottom: 55px;
+  color: var(--deep-blue, rgba(0, 0, 40, 1));
+  background-color: var(--accent-primary-color, rgba(255, 0, 112, 1));
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: 700;
+}
+
+.section__title {
+  color: var(--text-secondary-color, rgba(255, 0, 112, 1));
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.title-decor, .title-decor-normal {
+  background: var(--accent-primary-color, rgba(255, 0, 112, 1));
+  color: var(--highlight-primary-color, rgba(0, 0, 40, 1));
+}
+
+.title-decor-normal {
+  font-weight: normal;
+}
+
+/* СЕКЦИЯ C ФОТОГАЛЛЕРЕЕЙ*/
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.section-advice {
+  margin-block-end: 20px;
+}
+
+.section__picture {
+  gap: 10px;
+}
+
+.section__list {
+  display: grid;
+  gap: 20px;
+}
+
+.article {
+  display: grid;
+  gap: 10px;
+}
+
+.article__link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--link-primary-color, rgba(255, 0, 112, 1));
+}
+
+.picture__list {
+  display: grid;
+  gap: 10px;
+}
+
+.picture__list__item__image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+/* СЕКЦИЯ FOOTER */
+
+.footer {
+  display: grid;
+  align-items: center; /* по вертикальной оси */
+  justify-items: center; /* по горизонтальной оси */
+}
+/* СТИЛИ ДЛЯ ЭКРАНОВ ШИРЕ 768px */
+@media (min-width: 768px) {
+  .main {
+    gap: 80px;
+    padding: 60px 20px;
+  }
+
+  /* .rec-decor {
+    inset-inline-end: 28px;
+    inset-block-start: 20px;
+  } */
+
+  .rec-decor {
+    position: absolute;
+    right: 28px;
+    top: 20px;
+  }
+
+  .site__heading {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    /* Определяет размер шрифта, который может быть между 7.5rem и 9.8125rem, пропорционально ширине окна просмотра (vw) */
+  }
+
+  .section {
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+    /* Задает шаблон сетки с колонками, которые могут быть от 236px до 315px, либо равны 1/3 от ширины контейнера */
+  }
+
+  .section__main-questions__list {
+    grid-column-start: span 2;
+  }
+
+  .section__advices-list {
+    grid-column-start: 2;
+  }
+
+  .section__picture {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .picture__list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .picture__list__item:first-child,
+  .picture__list__item:last-child {
+    grid-column-start: span 2; /* Растягивает элементы через 2 столбца сетки */
+  }
+
+  .picture__list__item:nth-child(2),
+  .picture__list__item:nth-child(3) {
+    grid-row-start: span 2; /* Растягивает элементы через 2 строки сетки */
+  }
+
+  .header {
+    padding-inline-start: 0;
+  }
+
+  .header__theme-menu {
+    margin-top: 170px;
+    margin-bottom: 70px;
+  }
+
+  .header__page-description {
+    justify-self: end;
+    inline-size: clamp(364px, calc(100% / 2 - 10px), 491px);
+  }
+}
+
+/* СТИЛИ ДЛЯ ЭКРАНОВ ШИРЕ 1024px */
+@media (min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-inline-start: 20px;
+    margin-block-start: 0;
+    margin-block-end: 215px;
+  }
+
+  .site__heading {
+    text-shadow: 4px 4px 0 var(--bright-pink, rgba(255, 0, 112, 1));
+  }
+
+  .footer__shadow-detail {
+    text-shadow: 2px 2px 0 var(--accent-color, rgba(255, 0, 112, 1));
+  }
+
+  .section {
+    column-gap: 30px;
+  }
+
+  .section__main-questions__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }

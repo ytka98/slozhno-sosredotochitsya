@@ -6,8 +6,7 @@
 
 .page.theme_light {
   --background-color: var(--light-pink, rgba(255, 241, 247, 1));
-  --background-image-url: url('../images/cover-image-light.png');
-
+  --background-image: url('../images/cover-image-light.png');
   --recommendation-decoration-visibility: hidden;
 
   --text-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
@@ -19,14 +18,14 @@
     --bright-pink-transparent,
     rgba(53, 52, 48, 0.5)
   );
+  --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
 }
 
 /* Дублируем переменные светлой темы */
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: var(--light-pink, rgba(255, 241, 247, 1));
-    --background-image-url: url('../images/cover-image-light.png');
-
+    --background-image: url('../images/cover-image-light.png');
     --recommendation-decoration-visibility: hidden;
 
     --text-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
@@ -38,5 +37,6 @@
       --bright-pink-transparent,
       rgba(53, 52, 48, 0.5)
     );
+    --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
   }
 }

@@ -5,8 +5,40 @@
 */
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --text-primary-color: var(--soft-pink, rgba(241, 178, 206, 1));
+  --brand-primary-color: var(--vivid-purple, rgba(219, 0, 255, 1));
+  --text-secondary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+  --text-secondary-color-transparent: var(
+    --bright-pink-transparent,
+    rgba(255, 0, 112, 0.25)
+  );
+  --accent-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+  --highlight-primary-color: var(--deep-blue, rgba(0, 0, 40, 1));
+
+  --background-color: var(--deep-blue, rgba(0, 0, 40, 1));
+  --background-image: url('../images/cover-image-dark.png');
+  --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+
+  --recommendation-decoration-visibility: visible;
+}
+
+/* Дублируем переменные светлой темы */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary-color: var(--soft-pink, rgba(241, 178, 206, 1));
+    --brand-primary-color: var(--vivid-purple, rgba(219, 0, 255, 1));
+    --text-secondary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+    --text-secondary-color-transparent: var(
+      --bright-pink-transparent,
+      rgba(255, 0, 112, 0.25)
+    );
+    --accent-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+    --highlight-primary-color: var(--deep-blue, rgba(0, 0, 40, 1));
+
+    --background-color: var(--deep-blue, rgba(0, 0, 40, 1));
+    --background-image: url('../images/cover-image-dark.png');
+    --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
+
+    --recommendation-decoration-visibility: visible;
+  }
 }
