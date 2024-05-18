@@ -87,23 +87,6 @@
   justify-self: end;
 }
 
-.header__theme-menu-button_active {
-  border-color: currentColor;
-  cursor: default;
-  pointer-events: none;
-}
-
-.header__theme-menu-button:hover {
-  border-color: var(
-    --text-secondary-color-transparent,
-    rgba(255, 0, 112, 0.25)
-  );
-}
-
-.header__theme-menu-button:focus {
-  outline: 0;
-}
-
 /* СЕКЦИЯ C СТИЛИЗАЦИЕЙ REC */
 .rec-decor::before {
   content: 'REC';
