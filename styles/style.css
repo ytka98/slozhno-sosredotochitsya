@@ -243,11 +243,6 @@
     padding: 60px 20px;
   }
 
-  /* .rec-decor {
-    inset-inline-end: 28px;
-    inset-block-start: 20px;
-  } */
-
   .rec-decor {
     position: absolute;
     right: 28px;
