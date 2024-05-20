@@ -1,1 +1,0 @@
-https://github.com/ytka98/slozhno-sosredotochitsya
