@@ -216,6 +216,15 @@
   text-shadow: 2px 2px 0 var(--link-primary-color, rgba(255, 0, 112, 1));
 }
 
+.article__link:focus {
+  outline: 1px solid var(--link-outline-color, rgba(255, 0, 112, 1));
+  outline-offset: -1px; /* не уверен, что нужно добавлять оффсет, но вроде бы так больше похоже на макет фигмы */
+}
+
+.article__link:hover {
+  border-bottom: 1px solid var(--link-hover-color, rgba(241, 178, 206, 1));
+}
+
 .picture__list {
   display: grid;
   gap: 10px;

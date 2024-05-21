@@ -15,10 +15,15 @@
   --highlight-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
   --text-secondary-color: var(--dark-gray, rgba(53, 52, 48, 1));
   --text-secondary-color-transparent: var(
-    --bright-pink-transparent,
+    --light-gray-transparent,
     rgba(53, 52, 48, 0.5)
   );
   --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
+  --link-secondary-color: var(--light-gray-transparent, rgba(50, 49, 45, 0.4));
+  --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
+  --link-outline-color:  var(--middle-gray, rgba(53, 52, 48, 1)
+);
+
 }
 
 /* Дублируем переменные светлой темы */
@@ -34,9 +39,13 @@
     --highlight-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
     --text-secondary-color: var(--dark-gray, rgba(53, 52, 48, 1));
     --text-secondary-color-transparent: var(
-      --bright-pink-transparent,
+      --light-gray-transparent,
       rgba(53, 52, 48, 0.5)
     );
     --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
+    --link-secondary-color: var(--light-gray-transparent, rgba(50, 49, 45, 0.4));
+    --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
+    --link-outline-color:  var(--middle-gray, rgba(53, 52, 48, 1));
+
   }
 }

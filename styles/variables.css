@@ -15,7 +15,9 @@
 
   --deep-blue: rgba(0, 0, 40, 1);
   --dark-gray: rgba(53, 52, 48, 1);
+  --light-gray-transparent: rgba(50, 49, 45, 0.4);
   --dark-gray-transparent: rgba(53, 52, 48, 0.25);
+  --middle-gray: rgba(50, 49, 45, 1);
 
   --text-primary-color: var(--soft-pink);
   --brand-primary-color: var(--vivid-purple);
@@ -24,6 +26,9 @@
   --accent-primary-color: var(--bright-pink);
   --highlight-primary-color: var(--deep-blue);
   --link-primary-color: var(--bright-pink);
+  --link-secondary-color: var(--light-gray-transparent);
+  --link-hover-color: var(--soft-pink);
+  --link-outline-color: var(--bright-pink);
 
   --recommendation-decoration-visibility: visible;
 }
