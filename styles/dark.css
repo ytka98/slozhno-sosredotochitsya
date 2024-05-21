@@ -37,7 +37,6 @@
     );
     --accent-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
     --highlight-primary-color: var(--deep-blue, rgba(0, 0, 40, 1));
-
     --background-color: var(--deep-blue, rgba(0, 0, 40, 1)); 
     --background-image: url('../images/cover-image-dark.png');
     --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
