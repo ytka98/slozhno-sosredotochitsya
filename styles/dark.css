@@ -41,8 +41,7 @@
     --background-color: var(--deep-blue, rgba(0, 0, 40, 1));
     --background-image: url('../images/cover-image-dark.png');
     --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-    --link-secondary-color: var(--light-pink, rgba(255, 241, 247, 1));
-    --link-hover-color: var(--soft-pink, rgba(241, 178, 206, 1));
+    --link-secondary-color: var(--light-pink, rgba(255, 241, 247, 1));--link-hover-color: var(--soft-pink, rgba(241, 178, 206, 1));
     --link-outline-color: var(--soft-pink, rgba(241, 178, 206, 1));
 
     --recommendation-decoration-visibility: visible;
