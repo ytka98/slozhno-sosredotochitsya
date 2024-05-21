@@ -3,37 +3,46 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+
 .page.theme_dark {
-  --text-primary-color: var(--soft-pink, rgba(241, 178, 206, 1));
-  --brand-primary-color: var(--vivid-purple, rgba(219, 0, 255, 1));
-  --text-secondary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-  --text-secondary-color-transparent: var(--bright-pink-transparent, rgba(255, 0, 112, 0.25));
-  --accent-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-  --highlight-primary-color: var(--deep-blue, rgba(0, 0, 40, 1));
-  --background-color: var(--deep-blue, rgba(0, 0, 40, 1));
-  --background-image: url('../images/cover-image-dark.png');
-  --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-  --link-secondary-color: var(--light-pink, rgba(255, 241, 247, 1));
-  --link-hover-color: var(--soft-pink, rgba(241, 178, 206, 1));
-  --link-outline-color: var(--soft-pink, rgba(241, 178, 206, 1));
+  --text-primary-color: var(--soft-pink, rgb(241 178 206 / 1));
+  --brand-primary-color: var(--vivid-purple, rgb(219 0 255 / 1));
+  --text-secondary-color: var(--bright-pink, rgb(255 0 112 / 1));
+  --text-secondary-color-transparent: var(
+    --bright-pink-transparent,
+    rgb(255 0 112 / 0.25)
+  );
+  --accent-primary-color: var(--bright-pink, rgb(255 0 112 / 1));
+  --highlight-primary-color: var(--deep-blue, rgb(0 0 40 / 1));
+  --background-color: var(--deep-blue, rgb(0 0 40 / 1));
+  --background-image: url(../images/cover-image-dark.png);
+  --link-primary-color: var(--bright-pink, rgb(255 0 112 / 1));
+  --link-secondary-color: var(--light-pink, rgb(255 241 247 / 1));
+  --link-hover-color: var(--soft-pink, rgb(241 178 206 / 1));
+  --link-outline-color: var(--soft-pink, rgb(241 178 206 / 1));
   --recommendation-decoration-visibility: visible;
 }
 
 /* Дублируем переменные светлой темы */
+
 @media (prefers-color-scheme: dark) {
+
   :root {
-    --text-primary-color: var(--soft-pink, rgba(241, 178, 206, 1));
-    --brand-primary-color: var(--vivid-purple, rgba(219, 0, 255, 1));
-    --text-secondary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-    --text-secondary-color-transparent: var(--bright-pink-transparent, rgba(255, 0, 112, 0.25));
-    --accent-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-    --highlight-primary-color: var(--deep-blue, rgba(0, 0, 40, 1));
-    --background-color: var(--deep-blue, rgba(0, 0, 40, 1));
-    --background-image: url('../images/cover-image-dark.png');
-    --link-primary-color: var(--bright-pink, rgba(255, 0, 112, 1));
-    --link-secondary-color: var(--light-pink, rgba(255, 241, 247, 1));
-    --link-hover-color: var(--soft-pink, rgba(241, 178, 206, 1));
-    --link-outline-color: var(--soft-pink, rgba(241, 178, 206, 1));
+    --text-primary-color: var(--soft-pink, rgb(241 178 206 / 1));
+    --brand-primary-color: var(--vivid-purple, rgb(219 0 255 / 1));
+    --text-secondary-color: var(--bright-pink, rgb(255 0 112 / 1));
+    --text-secondary-color-transparent: var(
+      --bright-pink-transparent,
+      rgb(255 0 112 / 0.25)
+    );
+    --accent-primary-color: var(--bright-pink, rgb(255 0 112 / 1));
+    --highlight-primary-color: var(--deep-blue, rgb(0 0 40 / 1));
+    --background-color: var(--deep-blue, rgb(0 0 40 / 1));
+    --background-image: url(../images/cover-image-dark.png);
+    --link-primary-color: var(--bright-pink, rgb(255 0 112 / 1));
+    --link-secondary-color: var(--light-pink, rgb(255 241 247 / 1));
+    --link-hover-color: var(--soft-pink, rgb(241 178 206 / 1));
+    --link-outline-color: var(--soft-pink, rgb(241 178 206 / 1));
     --recommendation-decoration-visibility: visible;
   }
 }

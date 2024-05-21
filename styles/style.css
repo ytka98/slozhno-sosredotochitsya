@@ -6,6 +6,7 @@
 } */
 
 /* СЕКЦИЯ MAIN */
+
 .main {
   display: grid;
   gap: 50px;
@@ -13,6 +14,7 @@
 }
 
 /* СЕКЦИЯ HEADER */
+
 .wrapper {
   display: grid;
   padding: clamp(
@@ -29,16 +31,16 @@
   background-attachment: fixed;
   font-size: 18px;
   font-family: var(--font-family-mono, 'IBM Plex mono', monospace);
-  color: var(--text-primary-color, rgba(241, 178, 206, 1));
+  color: var(--text-primary-color, rgb(241 178 206 / 1));
   line-height: 23.4px;
-  background-color: var(--background-color, rgba(0, 0, 40, 1));
-  background-image: var(--background-image, url('../images/cover-image.png'));
+  background-color: var(--background-color, rgb(0 0 40 / 1));
+  background-image: var(--background-image, url(../images/cover-image.png));
 }
 
 .header__theme-menu-button {
   border: 1px solid transparent;
   padding: 2px 12px;
-  color: var(--text-secondary-color, rgba(255, 0, 112, 1));
+  color: var(--text-secondary-color, rgb(255 0 112 / 1));
   text-transform: lowercase;
   background: transparent;
   line-height: 18px;
@@ -49,7 +51,7 @@
   /* Устанавливаем цвет границы при наведении на элемент, используя переменную, или значение по умолчанию */
   border-color: var(
     --text-secondary-color-transparent,
-    rgba(255, 0, 112, 0.25)
+    rgb(255 0 112 / 0.25)
   );
 }
 
@@ -88,9 +90,10 @@
 }
 
 /* СЕКЦИЯ C СТИЛИЗАЦИЕЙ REC */
+
 .rec-decor::before {
   content: 'REC';
-  color: var(--accent-primary-color, rgba(255, 0, 112, 1));
+  color: var(--accent-primary-color, rgb(255 0 112 / 1));
   line-height: 24px;
 }
 
@@ -109,23 +112,23 @@
   content: '';
   display: inline-block;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px var(--accent-primary-color, rgba(255, 0, 112, 1));
-  background: var(--accent-primary-color, rgba(255, 0, 112, 1));
+  box-shadow: 0 0 2px 2px var(--accent-primary-color, rgb(255 0 112 / 1));
+  background: var(--accent-primary-color, rgb(255 0 112 / 1));
   inline-size: 9px;
   block-size: 9px;
 }
 
 .highlighted-area::before {
-  border-right: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
-  border-top: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
+  border-right: 1px solid var(--text-secondary-color, rgb(255 0 112 / 1));
+  border-top: 1px solid var(--text-secondary-color, rgb(255 0 112 / 1));
   right: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   /* Устанавливает отступ сверху, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
   top: clamp(10px, 0.0286rem + 2.5445vw, 20px);
 }
 
 .highlighted-area::after {
-  border-left: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
-  border-bottom: 1px solid var(--text-secondary-color, rgba(255, 0, 112, 1));
+  border-left: 1px solid var(--text-secondary-color, rgb(255 0 112 / 1));
+  border-bottom: 1px solid var(--text-secondary-color, rgb(255 0 112 / 1));
   left: clamp(10px, 0.0286rem + 2.5445vw, 20px);
   /* Устанавливает отступ снизу, минимум 10px, максимум 20px, с динамическим изменением в зависимости от ширины вьюпорта */
   bottom: clamp(10px, 0.0286rem + 2.5445vw, 20px);
@@ -146,31 +149,31 @@
 
 .site__heading {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--brand-primary-color, rgba(219, 0, 255, 1));
+  color: var(--brand-primary-color, rgb(219 0 255 / 1));
   font-weight: 700;
   line-height: 82.5%;
 }
 
 .header__shadow-detail {
-  text-shadow: 4px 4px 0 var(--accent-color, rgba(255, 0, 112, 1));
+  text-shadow: 4px 4px 0 var(--accent-color, rgb(255 0 112 / 1));
 }
 
 .footer__shadow-detail {
-  text-shadow: 2px 2px 0 var(--accent-color, rgba(255, 0, 112, 1));
+  text-shadow: 2px 2px 0 var(--accent-color, rgb(255 0 112 / 1));
 }
 
 .header__page-description {
   margin-top: 57px;
   margin-bottom: 55px;
-  color: var(--deep-blue, rgba(0, 0, 40, 1));
-  background-color: var(--accent-primary-color, rgba(255, 0, 112, 1));
+  color: var(--deep-blue, rgb(0 0 40 / 1));
+  background-color: var(--accent-primary-color, rgb(255 0 112 / 1));
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
 }
 
 .section__title {
-  color: var(--text-secondary-color, rgba(255, 0, 112, 1));
+  color: var(--text-secondary-color, rgb(255 0 112 / 1));
   font-weight: 700;
   font-size: inherit;
   line-height: inherit;
@@ -178,8 +181,8 @@
 
 .title-decor,
 .title-decor-normal {
-  background: var(--accent-primary-color, rgba(255, 0, 112, 1));
-  color: var(--highlight-primary-color, rgba(0, 0, 40, 1));
+  background: var(--accent-primary-color, rgb(255 0 112 / 1));
+  color: var(--highlight-primary-color, rgb(0 0 40 / 1));
 }
 
 .title-decor-normal {
@@ -213,16 +216,16 @@
 
 .article__link {
   text-decoration: none;
-  text-shadow: 2px 2px 0 var(--link-primary-color, rgba(255, 0, 112, 1));
+  text-shadow: 2px 2px 0 var(--link-primary-color, rgb(255 0 112 / 1));
 }
 
 .article__link:focus {
-  outline: 1px solid var(--link-outline-color, rgba(255, 0, 112, 1));
+  outline: 1px solid var(--link-outline-color, rgb(255 0 112 / 1));
   outline-offset: -1px; /* не уверен, что нужно добавлять оффсет, но вроде бы так больше похоже на макет фигмы */
 }
 
 .article__link:hover {
-  border-bottom: 1px solid var(--link-hover-color, rgba(241, 178, 206, 1));
+  border-bottom: 1px solid var(--link-hover-color, rgb(241 178 206 / 1));
 }
 
 .picture__list {
@@ -246,7 +249,9 @@
   justify-items: center; /* по горизонтальной оси */
 }
 /* СТИЛИ ДЛЯ ЭКРАНОВ ШИРЕ 768px */
+
 @media (min-width: 768px) {
+
   .main {
     gap: 80px;
     padding: 60px 20px;
@@ -312,7 +317,9 @@
 }
 
 /* СТИЛИ ДЛЯ ЭКРАНОВ ШИРЕ 1024px */
+
 @media (min-width: 1024px) {
+
   .header__theme-menu {
     justify-self: center;
     margin-inline-start: 20px;
@@ -321,11 +328,11 @@
   }
 
   .site__heading {
-    text-shadow: 4px 4px 0 var(--bright-pink, rgba(255, 0, 112, 1));
+    text-shadow: 4px 4px 0 var(--bright-pink, rgb(255 0 112 / 1));
   }
 
   .footer__shadow-detail {
-    text-shadow: 2px 2px 0 var(--accent-color, rgba(255, 0, 112, 1));
+    text-shadow: 2px 2px 0 var(--accent-color, rgb(255 0 112 / 1));
   }
 
   .section {

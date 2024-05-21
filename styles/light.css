@@ -5,47 +5,49 @@
 */
 
 .page.theme_light {
-  --background-color: var(--light-pink, rgba(255, 241, 247, 1));
-  --background-image: url('../images/cover-image-light.png');
+  --background-color: var(--light-pink, rgb(255 241 247 / 1));
+  --background-image: url(../images/cover-image-light.png);
   --recommendation-decoration-visibility: hidden;
 
-  --text-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
-  --accent-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
-  --brand-primary-color: var(--medium-pink, rgba(255, 194, 230, 1));
-  --highlight-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
-  --text-secondary-color: var(--dark-gray, rgba(53, 52, 48, 1));
+  --text-primary-color: var(--dark-gray, rgb(53 52 48 / 1));
+  --accent-primary-color: var(--vivid-pink, rgb(255 141 203 / 1));
+  --brand-primary-color: var(--medium-pink, rgb(255 194 230 / 1));
+  --highlight-primary-color: var(--dark-gray, rgb(53 52 48 / 1));
+  --text-secondary-color: var(--dark-gray, rgb(53 52 48 / 1));
   --text-secondary-color-transparent: var(
     --light-gray-transparent,
-    rgba(53, 52, 48, 0.5)
+    rgb(53 52 48 / 0.5)
   );
-  --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
-  --link-secondary-color: var(--light-gray-transparent, rgba(50, 49, 45, 0.4));
-  --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
-  --link-outline-color: var(--middle-gray, rgba(53, 52, 48, 1));
+  --link-primary-color: var(--vivid-pink, rgb(255 141 203 / 1));
+  --link-secondary-color: var(--light-gray-transparent, rgb(50 49 45 / 0.4));
+  --link-hover-color: var(--dark-gray, rgb(53 52 48 / 1));
+  --link-outline-color: var(--middle-gray, rgb(53 52 48 / 1));
 }
 
 /* Дублируем переменные светлой темы */
+
 @media (prefers-color-scheme: light) {
+
   :root {
-    --background-color: var(--light-pink, rgba(255, 241, 247, 1));
-    --background-image: url('../images/cover-image-light.png');
+    --background-color: var(--light-pink, rgb(255 241 247 / 1));
+    --background-image: url(../images/cover-image-light.png);
     --recommendation-decoration-visibility: hidden;
 
-    --text-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
-    --accent-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
-    --brand-primary-color: var(--medium-pink, rgba(255, 194, 230, 1));
-    --highlight-primary-color: var(--dark-gray, rgba(53, 52, 48, 1));
-    --text-secondary-color: var(--dark-gray, rgba(53, 52, 48, 1));
+    --text-primary-color: var(--dark-gray, rgb(53 52 48 / 1));
+    --accent-primary-color: var(--vivid-pink, rgb(255 141 203 / 1));
+    --brand-primary-color: var(--medium-pink, rgb(255 194 230 / 1));
+    --highlight-primary-color: var(--dark-gray, rgb(53 52 48 / 1));
+    --text-secondary-color: var(--dark-gray, rgb(53 52 48 / 1));
     --text-secondary-color-transparent: var(
       --light-gray-transparent,
-      rgba(53, 52, 48, 0.5)
+      rgb(53 52 48 / 0.5)
     );
-    --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
+    --link-primary-color: var(--vivid-pink, rgb(255 141 203 / 1));
     --link-secondary-color: var(
       --light-gray-transparent,
-      rgba(50, 49, 45, 0.4)
+      rgb(50 49 45 / 0.4)
     );
-    --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
-    --link-outline-color: var(--middle-gray, rgba(53, 52, 48, 1));
+    --link-hover-color: var(--dark-gray, rgb(53 52 48 / 1));
+    --link-outline-color: var(--middle-gray, rgb(53 52 48 / 1));
   }
 }
