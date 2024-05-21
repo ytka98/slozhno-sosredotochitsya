@@ -21,9 +21,7 @@
   --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
   --link-secondary-color: var(--light-gray-transparent, rgba(50, 49, 45, 0.4));
   --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
-  --link-outline-color:  var(--middle-gray, rgba(53, 52, 48, 1)
-);
-
+  --link-outline-color: var(--middle-gray, rgba(53, 52, 48, 1));
 }
 
 /* Дублируем переменные светлой темы */
@@ -43,9 +41,11 @@
       rgba(53, 52, 48, 0.5)
     );
     --link-primary-color: var(--vivid-pink, rgba(255, 141, 203, 1));
-    --link-secondary-color: var(--light-gray-transparent, rgba(50, 49, 45, 0.4));
+    --link-secondary-color: var(
+      --light-gray-transparent,
+      rgba(50, 49, 45, 0.4)
+    );
     --link-hover-color: var(--dark-gray, rgba(53, 52, 48, 1));
-    --link-outline-color:  var(--middle-gray, rgba(53, 52, 48, 1));
-
+    --link-outline-color: var(--middle-gray, rgba(53, 52, 48, 1));
   }
 }
